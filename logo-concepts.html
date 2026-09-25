@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LA Tantra — Logo Concepts v2</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Manrope:wght@200;300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1A1A1A;
+      --ink-soft: #3D3D3D;
+      --ink-deep: #0D0D0D;
+      --cream: #FAF5EF;
+      --cream-warm: #F2E8DA;
+      --cream-dark: #E8DDD0;
+      --teal: #2A7C6F;
+      --teal-dark: #1D5A50;
+      --sage: #7A9E7E;
+      --gold: #C5A55A;
+      --gold-rich: #B8942E;
+      --gold-pale: #D4BC7C;
+      --gold-light: #F5EDD6;
+      --copper: #B87333;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Manrope', system-ui, sans-serif;
+      background: #0D0D0D;
+      color: var(--cream);
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page-header {
+      text-align: center;
+      padding: 56px 24px 12px;
+    }
+    .page-header h1 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 300;
+      font-size: 24px;
+      color: var(--cream);
+      letter-spacing: 0.12em;
+      opacity: 0.7;
+    }
+    .page-header p {
+      font-size: 12px;
+      color: var(--cream);
+      opacity: 0.35;
+      margin-top: 8px;
+      letter-spacing: 0.04em;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2px;
+      padding: 32px 2px 80px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    @media (min-width: 640px) {
+      .grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (min-width: 1100px) {
+      .grid { padding: 40px 2px 96px; }
+    }
+
+    .card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .logo-frame {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 340px;
+      padding: 56px 40px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card-info {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 20px 24px;
+      background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
+      z-index: 10;
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity 0.35s ease, transform 0.35s ease;
+    }
+    .card:hover .card-info {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    @media (max-width: 639px) {
+      .card-info {
+        opacity: 1;
+        transform: translateY(0);
+        background: linear-gradient(to top, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0) 100%);
+      }
+    }
+    .card-info .variant-num {
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold-pale);
+      margin-bottom: 3px;
+    }
+    .card-info h3 {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      color: white;
+      margin-bottom: 2px;
+    }
+    .card-info p {
+      font-size: 11px;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.45;
+    }
+
+
+    /* ═══════════════════════════════════════
+       V1 — GOLD FOIL SERIF
+       The luxe editorial approach
+    ═══════════════════════════════════════ */
+    .v1-frame {
+      background: var(--ink-deep);
+      background-image:
+        radial-gradient(ellipse 600px 400px at 30% 40%, rgba(197, 165, 90, 0.04) 0%, transparent 70%),
+        radial-gradient(ellipse 400px 300px at 70% 60%, rgba(42, 124, 111, 0.03) 0%, transparent 70%);
+    }
+    .v1 { text-align: center; position: relative; }
+    .v1 .top-ornament {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .v1 .top-ornament .orn-line {
+      width: 32px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold-pale), transparent);
+    }
+    .v1 .top-ornament .orn-diamond {
+      width: 6px;
+      height: 6px;
+      border: 1px solid var(--gold);
+      transform: rotate(45deg);
+    }
+    .v1 .la-text {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 300;
+      font-style: italic;
+      font-size: 18px;
+      letter-spacing: 0.4em;
+      background: linear-gradient(135deg, var(--gold-pale) 0%, var(--gold) 40%, var(--gold-rich) 60%, var(--gold-pale) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 2px;
+    }
+    .v1 .tantra-text {
+      font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+      font-weight: 700;
+      font-size: 56px;
+      letter-spacing: 0.14em;
+      line-height: 1;
+      background: linear-gradient(170deg, #E8D5A3 0%, #C5A55A 25%, #8B7335 50%, #C5A55A 75%, #E8D5A3 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      filter: brightness(1.1);
+      text-shadow: none;
+    }
+    .v1 .sub-line {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      margin-top: 16px;
+    }
+    .v1 .sub-line .sub-dash {
+      width: 20px;
+      height: 1px;
+      background: var(--gold);
+      opacity: 0.4;
+    }
+    .v1 .sub-text {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 400;
+      font-size: 9.5px;
+      letter-spacing: 0.35em;
+      color: var(--gold-pale);
+      text-transform: uppercase;
+      opacity: 0.7;
+    }
+
+
+    /* ═══════════════════════════════════════
+       V2 — GEOMETRIC KOLAM MARK
+       Inspired by South Indian rangoli/kolam
+    ═══════════════════════════════════════ */
+    .v2-frame {
+      background: var(--cream);
+      background-image: radial-gradient(circle at 50% 50%, var(--cream) 0%, var(--cream-warm) 100%);
+    }
+    .v2 { text-align: center; position: relative; }
+    .v2 .kolam-mark {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 20px;
+      position: relative;
+    }
+    .v2 .kolam-mark svg {
+      width: 100%;
+      height: 100%;
+    }
+    .v2 .brand-name {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 600;
+      font-size: 32px;
+      letter-spacing: 0.1em;
+      color: var(--ink);
+      line-height: 1;
+    }
+    .v2 .divider-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin: 10px 0;
+    }
+    .v2 .divider-row .dv-line {
+      width: 28px;
+      height: 1px;
+      background: var(--teal);
+      opacity: 0.5;
+    }
+    .v2 .divider-row .dv-dot {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--teal);
+      opacity: 0.6;
+    }
+    .v2 .sub-text {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 500;
+      font-size: 8.5px;
+      letter-spacing: 0.38em;
+      color: var(--teal-dark);
+      text-transform: uppercase;
+      opacity: 0.8;
+    }
+
+
+    /* ═══════════════════════════════════════
+       V3 — ARCHITECTURAL ARCH
+       Indian doorway / arch framing
+    ═══════════════════════════════════════ */
+    .v3-frame {
+      background: #1C1917;
+      background-image: radial-gradient(ellipse 500px 600px at 50% 30%, rgba(184, 115, 51, 0.06) 0%, transparent 60%);
+    }
+    .v3 { text-align: center; position: relative; }
+    .v3 .arch-container {
+      position: relative;
+      width: 180px;
+      margin: 0 auto;
+      padding-top: 12px;
+    }
+    .v3 .arch-container svg {
+      width: 100%;
+      height: auto;
+    }
+    .v3 .arch-text {
+      position: relative;
+      padding: 6px 0 0;
+    }
+    .v3 .la-prefix {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 300;
+      font-style: italic;
+      font-size: 16px;
+      letter-spacing: 0.3em;
+      color: var(--copper);
+      opacity: 0.8;
+    }
+    .v3 .tantra-main {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 700;
+      font-size: 36px;
+      letter-spacing: 0.12em;
+      color: var(--cream);
+      line-height: 1.05;
+    }
+    .v3 .sub-wellness {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 300;
+      font-size: 8.5px;
+      letter-spacing: 0.42em;
+      color: var(--copper);
+      text-transform: uppercase;
+      margin-top: 14px;
+      opacity: 0.65;
+    }
+
+
+    /* ═══════════════════════════════════════
+       V4 — HORIZONTAL PREMIUM
+       Refined lockup with custom mark
+    ═══════════════════════════════════════ */
+    .v4-frame {
+      background: var(--cream);
+      background-image: linear-gradient(135deg, var(--cream) 0%, var(--cream-warm) 100%);
+    }
+    .v4 {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      position: relative;
+    }
+    .v4 .mark-block {
+      width: 68px;
+      height: 68px;
+      background: var(--ink);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      flex-shrink: 0;
+    }
+    .v4 .mark-block::before {
+      content: '';
+      position: absolute;
+      inset: 3px;
+      border: 1px solid var(--gold);
+      opacity: 0.4;
+    }
+    .v4 .mark-block .lt-mono {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 700;
+      font-size: 24px;
+      color: var(--gold-pale);
+      letter-spacing: 0.04em;
+      line-height: 1;
+    }
+    .v4 .text-block {
+      padding-left: 20px;
+      border-left: 1px solid var(--cream-dark);
+      margin-left: 20px;
+      padding-top: 4px;
+      padding-bottom: 4px;
+    }
+    .v4 .text-block .brand-name {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 600;
+      font-size: 28px;
+      letter-spacing: 0.08em;
+      color: var(--ink);
+      line-height: 1;
+    }
+    .v4 .text-block .sub-desc {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 400;
+      font-size: 8px;
+      letter-spacing: 0.32em;
+      color: var(--ink-soft);
+      text-transform: uppercase;
+      margin-top: 6px;
+      opacity: 0.65;
+    }
+
+
+    /* ═══════════════════════════════════════
+       V5 — EMBOSSED CREAM
+       Textured paper with subtle depth
+    ═══════════════════════════════════════ */
+    .v5-frame {
+      background: var(--cream-warm);
+      background-image:
+        url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C5A55A' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .v5 {
+      text-align: center;
+      position: relative;
+    }
+    .v5 .brand-la {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 400;
+      font-style: italic;
+      font-size: 22px;
+      letter-spacing: 0.25em;
+      color: var(--ink);
+      opacity: 0.45;
+      margin-bottom: -2px;
+    }
+    .v5 .brand-tantra {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 800;
+      font-size: 52px;
+      letter-spacing: 0.06em;
+      color: var(--ink);
+      line-height: 1;
+      text-shadow:
+        1px 1px 0 rgba(255,255,255,0.5),
+        -1px -1px 0 rgba(0,0,0,0.05);
+    }
+    .v5 .rule-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      margin: 14px 0 12px;
+    }
+    .v5 .rule-container .rule-wing {
+      width: 40px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold-rich));
+    }
+    .v5 .rule-container .rule-wing:last-child {
+      background: linear-gradient(90deg, var(--gold-rich), transparent);
+    }
+    .v5 .rule-container .rule-center {
+      width: 8px;
+      height: 8px;
+      border: 1px solid var(--gold);
+      border-radius: 50%;
+      position: relative;
+    }
+    .v5 .rule-container .rule-center::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 3px;
+      height: 3px;
+      background: var(--gold);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .v5 .sub-text {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 500;
+      font-size: 9px;
+      letter-spacing: 0.38em;
+      color: var(--ink-soft);
+      text-transform: uppercase;
+      opacity: 0.55;
+    }
+
+
+    /* ═══════════════════════════════════════
+       V6 — FLOWING CONTRAST
+       Italic "La" script + Bold "TANTRA"
+    ═══════════════════════════════════════ */
+    .v6-frame {
+      background: var(--ink-deep);
+      background-image:
+        radial-gradient(ellipse 800px 500px at 40% 50%, rgba(42, 124, 111, 0.06) 0%, transparent 70%);
+    }
+    .v6 { text-align: center; position: relative; }
+    .v6 .flow-brand {
+      position: relative;
+      display: inline-block;
+    }
+    .v6 .la-script {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 500;
+      font-style: italic;
+      font-size: 44px;
+      color: var(--teal);
+      letter-spacing: 0.04em;
+      line-height: 1;
+      position: relative;
+      display: inline-block;
+      margin-right: 4px;
+    }
+    .v6 .tantra-bold {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 700;
+      font-size: 44px;
+      letter-spacing: 0.12em;
+      color: var(--cream);
+      line-height: 1;
+    }
+    .v6 .accent-line {
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, var(--teal), var(--teal-dark), transparent);
+      margin-top: 12px;
+      border-radius: 1px;
+    }
+    .v6 .sub-text {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 300;
+      font-size: 9px;
+      letter-spacing: 0.4em;
+      color: var(--cream);
+      text-transform: uppercase;
+      margin-top: 14px;
+      opacity: 0.35;
+    }
+
+
+    /* ═══════════════════════════════════════
+       V7 — TEAL MONOGRAM SEAL
+       Detailed circular seal with depth
+    ═══════════════════════════════════════ */
+    .v7-frame {
+      background: #1A1F1E;
+      background-image:
+        radial-gradient(circle at 50% 50%, rgba(42, 124, 111, 0.08) 0%, transparent 60%);
+    }
+    .v7 { text-align: center; position: relative; }
+    .v7 .seal-outer {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 1px solid rgba(42, 124, 111, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 22px;
+      position: relative;
+    }
+    .v7 .seal-outer::before {
+      content: '';
+      position: absolute;
+      inset: 6px;
+      border-radius: 50%;
+      border: 1px solid rgba(42, 124, 111, 0.15);
+    }
+    .v7 .seal-inner {
+      width: 128px;
+      height: 128px;
+      border-radius: 50%;
+      background: linear-gradient(145deg, var(--teal-dark) 0%, var(--teal) 50%, #35917F 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow:
+        0 4px 20px rgba(42, 124, 111, 0.3),
+        inset 0 1px 0 rgba(255,255,255,0.08),
+        inset 0 -2px 4px rgba(0,0,0,0.2);
+      position: relative;
+    }
+    .v7 .seal-inner::before {
+      content: '';
+      position: absolute;
+      inset: 6px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+    .v7 .seal-inner .lt-top {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 400;
+      font-size: 7px;
+      letter-spacing: 0.35em;
+      color: rgba(255,255,255,0.5);
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+    .v7 .seal-inner .lt-main {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 700;
+      font-size: 40px;
+      color: white;
+      line-height: 1;
+      letter-spacing: 0.06em;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+    .v7 .seal-inner .lt-bottom {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 400;
+      font-size: 7px;
+      letter-spacing: 0.35em;
+      color: rgba(255,255,255,0.5);
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+    .v7 .brand-below {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 500;
+      font-size: 22px;
+      letter-spacing: 0.2em;
+      color: var(--cream);
+      opacity: 0.8;
+    }
+    .v7 .sub-below {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 300;
+      font-size: 8.5px;
+      letter-spacing: 0.35em;
+      color: var(--teal);
+      text-transform: uppercase;
+      margin-top: 5px;
+      opacity: 0.6;
+    }
+
+
+    /* ═══════════════════════════════════════
+       V8 — VERTICAL STACK EDITORIAL
+       Magazine-style vertical emphasis
+    ═══════════════════════════════════════ */
+    .v8-frame {
+      background: var(--cream);
+      background-image: linear-gradient(180deg, var(--cream) 0%, var(--cream-warm) 100%);
+    }
+    .v8 {
+      text-align: center;
+      position: relative;
+    }
+    .v8 .editorial-frame {
+      position: relative;
+      padding: 28px 24px 24px;
+      border: 1px solid var(--cream-dark);
+    }
+    .v8 .editorial-frame::before,
+    .v8 .editorial-frame::after {
+      content: '';
+      position: absolute;
+      width: 12px;
+      height: 12px;
+    }
+    .v8 .editorial-frame::before {
+      top: -1px;
+      left: -1px;
+      border-top: 2px solid var(--gold);
+      border-left: 2px solid var(--gold);
+    }
+    .v8 .editorial-frame::after {
+      bottom: -1px;
+      right: -1px;
+      border-bottom: 2px solid var(--gold);
+      border-right: 2px solid var(--gold);
+    }
+    .v8 .corner-tl, .v8 .corner-br {
+      position: absolute;
+      width: 12px;
+      height: 12px;
+    }
+    .v8 .corner-tl {
+      top: -1px;
+      right: -1px;
+      border-top: 2px solid var(--gold);
+      border-right: 2px solid var(--gold);
+    }
+    .v8 .corner-br {
+      bottom: -1px;
+      left: -1px;
+      border-bottom: 2px solid var(--gold);
+      border-left: 2px solid var(--gold);
+    }
+    .v8 .top-label {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 500;
+      font-size: 7.5px;
+      letter-spacing: 0.45em;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .v8 .main-la {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 300;
+      font-style: italic;
+      font-size: 20px;
+      letter-spacing: 0.15em;
+      color: var(--ink-soft);
+      margin-bottom: -6px;
+    }
+    .v8 .main-tantra {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 800;
+      font-size: 42px;
+      letter-spacing: 0.1em;
+      color: var(--ink);
+      line-height: 1.1;
+    }
+    .v8 .bottom-rule {
+      width: 50px;
+      height: 1px;
+      background: var(--gold);
+      margin: 12px auto;
+      opacity: 0.6;
+    }
+    .v8 .sub-text {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 400;
+      font-size: 8px;
+      letter-spacing: 0.35em;
+      color: var(--ink-soft);
+      text-transform: uppercase;
+      opacity: 0.5;
+    }
+
+
+    /* ═══════════════════════════════════════
+       V9 — SPLIT DUALITY
+       Half serif, half sans — the tension
+    ═══════════════════════════════════════ */
+    .v9-frame {
+      background: var(--ink-deep);
+      position: relative;
+      overflow: hidden;
+    }
+    .v9-frame::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50%;
+      height: 100%;
+      background: var(--cream);
+    }
+    .v9 {
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+    .v9 .split-brand {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+    }
+    .v9 .half-la {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 600;
+      font-style: italic;
+      font-size: 46px;
+      letter-spacing: 0.06em;
+      color: var(--cream);
+      line-height: 1;
+      padding-right: 6px;
+    }
+    .v9 .divider-v {
+      width: 1px;
+      height: 56px;
+      background: linear-gradient(to bottom, transparent, var(--gold), transparent);
+      flex-shrink: 0;
+    }
+    .v9 .half-tantra {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      font-size: 28px;
+      letter-spacing: 0.22em;
+      color: var(--ink);
+      line-height: 1;
+      padding-left: 10px;
+      text-transform: uppercase;
+    }
+    .v9 .sub-unified {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 400;
+      font-size: 8.5px;
+      letter-spacing: 0.38em;
+      text-transform: uppercase;
+      margin-top: 18px;
+    }
+    .v9 .sub-unified .s1 {
+      color: rgba(250, 245, 239, 0.45);
+    }
+    .v9 .sub-unified .s2 {
+      color: rgba(26, 26, 26, 0.4);
+    }
+
+
+    /* ═══════════════════════════════════════
+       V10 — PETAL MARK + GOLD WORDMARK
+       Organic mark with luxury typography
+    ═══════════════════════════════════════ */
+    .v10-frame {
+      background: #181512;
+      background-image:
+        radial-gradient(ellipse 600px 500px at 50% 40%, rgba(197, 165, 90, 0.05) 0%, transparent 70%);
+    }
+    .v10 { text-align: center; position: relative; }
+    .v10 .petal-mark {
+      width: 72px;
+      height: 72px;
+      margin: 0 auto 24px;
+      position: relative;
+    }
+    .v10 .petal-mark svg {
+      width: 100%;
+      height: 100%;
+    }
+    .v10 .brand-la {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 300;
+      font-style: italic;
+      font-size: 20px;
+      letter-spacing: 0.25em;
+      background: linear-gradient(135deg, var(--gold-pale), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0;
+    }
+    .v10 .brand-tantra {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 700;
+      font-size: 44px;
+      letter-spacing: 0.1em;
+      background: linear-gradient(170deg, #E8D5A3 0%, #C5A55A 30%, #8B7335 60%, #C5A55A 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+    }
+    .v10 .ornament-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin: 14px 0 10px;
+    }
+    .v10 .ornament-bottom .ob-line {
+      width: 24px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold));
+      opacity: 0.5;
+    }
+    .v10 .ornament-bottom .ob-line:last-child {
+      background: linear-gradient(90deg, var(--gold), transparent);
+    }
+    .v10 .ornament-bottom svg {
+      opacity: 0.6;
+    }
+    .v10 .sub-text {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 400;
+      font-size: 8.5px;
+      letter-spacing: 0.4em;
+      color: var(--gold-pale);
+      text-transform: uppercase;
+      opacity: 0.45;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header class="page-header">
+    <h1>L A &nbsp; T A N T R A</h1>
+    <p>10 Premium Logo Concepts — Hover to reveal details</p>
+  </header>
+
+  <div class="grid">
+
+    <!-- ═══ V1: Gold Foil Serif ═══ -->
+    <div class="card">
+      <div class="logo-frame v1-frame">
+        <div class="v1">
+          <div class="top-ornament">
+            <div class="orn-line"></div>
+            <div class="orn-diamond"></div>
+            <div class="orn-line"></div>
+          </div>
+          <div class="la-text">La</div>
+          <div class="tantra-text">TANTRA</div>
+          <div class="sub-line">
+            <span class="sub-dash"></span>
+            <span class="sub-text">Massage &amp; Wellness</span>
+            <span class="sub-dash"></span>
+          </div>
+        </div>
+      </div>
+      <div class="card-info">
+        <div class="variant-num">Concept 01</div>
+        <h3>Gold Foil Editorial</h3>
+        <p>Simulated gold foil gradient on dark ink. Premium, warm, editorial. Ideal for hero sections and dark backgrounds.</p>
+      </div>
+    </div>
+
+    <!-- ═══ V2: Geometric Kolam Mark ═══ -->
+    <div class="card">
+      <div class="logo-frame v2-frame">
+        <div class="v2">
+          <div class="kolam-mark">
+            <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Outer square rotated -->
+              <rect x="40" y="4" width="50.91" height="50.91" rx="2" transform="rotate(45 40 4)" stroke="#2A7C6F" stroke-width="1" opacity="0.35"/>
+              <!-- Inner square rotated -->
+              <rect x="40" y="14" width="36.77" height="36.77" rx="1.5" transform="rotate(45 40 14)" stroke="#2A7C6F" stroke-width="1" opacity="0.55"/>
+              <!-- Center circle -->
+              <circle cx="40" cy="40" r="12" stroke="#2A7C6F" stroke-width="1.2" opacity="0.7"/>
+              <!-- Center dot -->
+              <circle cx="40" cy="40" r="3" fill="#2A7C6F" opacity="0.6"/>
+              <!-- 4 small corner dots -->
+              <circle cx="40" cy="8" r="2" fill="#2A7C6F" opacity="0.4"/>
+              <circle cx="40" cy="72" r="2" fill="#2A7C6F" opacity="0.4"/>
+              <circle cx="8" cy="40" r="2" fill="#2A7C6F" opacity="0.4"/>
+              <circle cx="72" cy="40" r="2" fill="#2A7C6F" opacity="0.4"/>
+              <!-- Cross lines through center -->
+              <line x1="40" y1="20" x2="40" y2="28" stroke="#2A7C6F" stroke-width="0.8" opacity="0.4"/>
+              <line x1="40" y1="52" x2="40" y2="60" stroke="#2A7C6F" stroke-width="0.8" opacity="0.4"/>
+              <line x1="20" y1="40" x2="28" y2="40" stroke="#2A7C6F" stroke-width="0.8" opacity="0.4"/>
+              <line x1="52" y1="40" x2="60" y2="40" stroke="#2A7C6F" stroke-width="0.8" opacity="0.4"/>
+            </svg>
+          </div>
+          <div class="brand-name">La Tantra</div>
+          <div class="divider-row">
+            <div class="dv-line"></div>
+            <div class="dv-dot"></div>
+            <div class="dv-line"></div>
+          </div>
+          <div class="sub-text">Massage &amp; Wellness</div>
+        </div>
+      </div>
+      <div class="card-info">
+        <div class="variant-num">Concept 02</div>
+        <h3>Geometric Kolam</h3>
+        <p>Inspired by South Indian kolam/rangoli geometry. Nested squares and circles — mathematical, cultural, grounded.</p>
+      </div>
+    </div>
+
+    <!-- ═══ V3: Architectural Arch ═══ -->
+    <div class="card">
+      <div class="logo-frame v3-frame">
+        <div class="v3">
+          <div class="arch-container">
+            <svg viewBox="0 0 180 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Outer arch -->
+              <path d="M 10 100 L 10 40 Q 10 8 45 8 L 135 8 Q 170 8 170 40 L 170 100" stroke="#B87333" stroke-width="1" opacity="0.35" fill="none"/>
+              <!-- Inner arch -->
+              <path d="M 22 100 L 22 44 Q 22 18 52 18 L 128 18 Q 158 18 158 44 L 158 100" stroke="#B87333" stroke-width="0.8" opacity="0.2" fill="none"/>
+              <!-- Keystone decoration -->
+              <circle cx="90" cy="8" r="3" fill="none" stroke="#B87333" stroke-width="0.8" opacity="0.4"/>
+              <circle cx="90" cy="8" r="1" fill="#B87333" opacity="0.4"/>
+              <!-- Base ornaments -->
+              <line x1="10" y1="100" x2="170" y2="100" stroke="#B87333" stroke-width="0.5" opacity="0.15"/>
+              <!-- Pillar caps -->
+              <rect x="6" y="96" width="12" height="4" fill="none" stroke="#B87333" stroke-width="0.6" opacity="0.3" rx="0.5"/>
+              <rect x="162" y="96" width="12" height="4" fill="none" stroke="#B87333" stroke-width="0.6" opacity="0.3" rx="0.5"/>
+            </svg>
+            <div class="arch-text">
+              <div class="la-prefix">La</div>
+              <div class="tantra-main">TANTRA</div>
+            </div>
+          </div>
+          <div class="sub-wellness">Massage &amp; Wellness</div>
+        </div>
+      </div>
+      <div class="card-info">
+        <div class="variant-num">Concept 03</div>
+        <h3>Architectural Arch</h3>
+        <p>Indian arch/doorway motif in copper. Frames the brand name. Evokes doorstep entry and traditional Indian architecture.</p>
+      </div>
+    </div>
+
+    <!-- ═══ V4: Horizontal Premium Lockup ═══ -->
+    <div class="card">
+      <div class="logo-frame v4-frame">
+        <div class="v4">
+          <div class="mark-block">
+            <span class="lt-mono">LT</span>
+          </div>
+          <div class="text-block">
+            <div class="brand-name">La Tantra</div>
+            <div class="sub-desc">Massage &amp; Wellness</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-info">
+        <div class="variant-num">Concept 04</div>
+        <h3>Compact Lockup</h3>
+        <p>Gold-on-dark monogram box paired with serif wordmark. Compact, structured, works in tight header spaces and business cards.</p>
+      </div>
+    </div>
+
+    <!-- ═══ V5: Embossed Cream ═══ -->
+    <div class="card">
+      <div class="logo-frame v5-frame">
+        <div class="v5">
+          <div class="brand-la">La</div>
+          <div class="brand-tantra">TANTRA</div>
+          <div class="rule-container">
+            <div class="rule-wing"></div>
+            <div class="rule-center"></div>
+            <div class="rule-wing"></div>
+          </div>
+          <div class="sub-text">Massage &amp; Wellness</div>
+        </div>
+      </div>
+      <div class="card-info">
+        <div class="variant-num">Concept 05</div>
+        <h3>Embossed Paper</h3>
+        <p>Heavy serif on textured cream with subtle emboss effect. Gold ornamental rule. Feels like letterpress on thick card stock.</p>
+      </div>
+    </div>
+
+    <!-- ═══ V6: Flowing Contrast ═══ -->
+    <div class="card">
+      <div class="logo-frame v6-frame">
+        <div class="v6">
+          <div class="flow-brand">
+            <span class="la-script">La</span>
+            <span class="tantra-bold">TANTRA</span>
+            <div class="accent-line"></div>
+          </div>
+          <div class="sub-text">Massage &amp; Wellness</div>
+        </div>
+      </div>
+      <div class="card-info">
+        <div class="variant-num">Concept 06</div>
+        <h3>Flowing Contrast</h3>
+        <p>Italic serif "La" in teal meets bold serif "TANTRA" in cream. The teal accent line grounds the composition. Dynamic tension.</p>
+      </div>
+    </div>
+
+    <!-- ═══ V7: Teal Monogram Seal ═══ -->
+    <div class="card">
+      <div class="logo-frame v7-frame">
+        <div class="v7">
+          <div class="seal-outer">
+            <div class="seal-inner">
+              <span class="lt-top">Est. 2026</span>
+              <span class="lt-main">LT</span>
+              <span class="lt-bottom">Premium</span>
+            </div>
+          </div>
+          <div class="brand-below">La Tantra</div>
+          <div class="sub-below">Massage &amp; Wellness</div>
+        </div>
+      </div>
+      <div class="card-info">
+        <div class="variant-num">Concept 07</div>
+        <h3>Teal Seal</h3>
+        <p>Dimensional teal seal with inner glow and shadow depth. Concentric rings create authority. Standalone app icon or paired with wordmark.</p>
+      </div>
+    </div>
+
+    <!-- ═══ V8: Gold-Framed Editorial ═══ -->
+    <div class="card">
+      <div class="logo-frame v8-frame">
+        <div class="v8">
+          <div class="editorial-frame">
+            <div class="corner-tl"></div>
+            <div class="corner-br"></div>
+            <div class="top-label">Premium Wellness</div>
+            <div class="main-la">La</div>
+            <div class="main-tantra">TANTRA</div>
+            <div class="bottom-rule"></div>
+            <div class="sub-text">Massage &amp; Wellness</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-info">
+        <div class="variant-num">Concept 08</div>
+        <h3>Gold Frame Editorial</h3>
+        <p>Structured frame with gold corner accents. Magazine editorial feel — confident, established, and collectible. Works on light backgrounds.</p>
+      </div>
+    </div>
+
+    <!-- ═══ V9: Split Duality ═══ -->
+    <div class="card">
+      <div class="logo-frame v9-frame">
+        <div class="v9">
+          <div class="split-brand">
+            <span class="half-la">La</span>
+            <div class="divider-v"></div>
+            <span class="half-tantra">Tantra</span>
+          </div>
+          <div class="sub-unified">
+            <span class="s1">Massage</span>
+            <span style="color: var(--gold); opacity: 0.5;">&nbsp;·&nbsp;</span>
+            <span class="s2">Wellness</span>
+          </div>
+        </div>
+      </div>
+      <div class="card-info">
+        <div class="variant-num">Concept 09</div>
+        <h3>Split Duality</h3>
+        <p>Dark and light halves split the canvas. Italic serif meets geometric sans-serif across the gold divider. Bold, modern, high-contrast.</p>
+      </div>
+    </div>
+
+    <!-- ═══ V10: Petal Mark + Gold ═══ -->
+    <div class="card">
+      <div class="logo-frame v10-frame">
+        <div class="v10">
+          <div class="petal-mark">
+            <svg viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- 6 petals radiating from center -->
+              <ellipse cx="36" cy="18" rx="6" ry="16" fill="none" stroke="#C5A55A" stroke-width="0.8" opacity="0.5"/>
+              <ellipse cx="36" cy="18" rx="6" ry="16" fill="none" stroke="#C5A55A" stroke-width="0.8" opacity="0.5" transform="rotate(60 36 36)"/>
+              <ellipse cx="36" cy="18" rx="6" ry="16" fill="none" stroke="#C5A55A" stroke-width="0.8" opacity="0.5" transform="rotate(120 36 36)"/>
+              <ellipse cx="36" cy="18" rx="6" ry="16" fill="none" stroke="#C5A55A" stroke-width="0.8" opacity="0.5" transform="rotate(180 36 36)"/>
+              <ellipse cx="36" cy="18" rx="6" ry="16" fill="none" stroke="#C5A55A" stroke-width="0.8" opacity="0.5" transform="rotate(240 36 36)"/>
+              <ellipse cx="36" cy="18" rx="6" ry="16" fill="none" stroke="#C5A55A" stroke-width="0.8" opacity="0.5" transform="rotate(300 36 36)"/>
+              <!-- Inner smaller petals -->
+              <ellipse cx="36" cy="24" rx="3.5" ry="10" fill="none" stroke="#C5A55A" stroke-width="0.6" opacity="0.3"/>
+              <ellipse cx="36" cy="24" rx="3.5" ry="10" fill="none" stroke="#C5A55A" stroke-width="0.6" opacity="0.3" transform="rotate(60 36 36)"/>
+              <ellipse cx="36" cy="24" rx="3.5" ry="10" fill="none" stroke="#C5A55A" stroke-width="0.6" opacity="0.3" transform="rotate(120 36 36)"/>
+              <ellipse cx="36" cy="24" rx="3.5" ry="10" fill="none" stroke="#C5A55A" stroke-width="0.6" opacity="0.3" transform="rotate(180 36 36)"/>
+              <ellipse cx="36" cy="24" rx="3.5" ry="10" fill="none" stroke="#C5A55A" stroke-width="0.6" opacity="0.3" transform="rotate(240 36 36)"/>
+              <ellipse cx="36" cy="24" rx="3.5" ry="10" fill="none" stroke="#C5A55A" stroke-width="0.6" opacity="0.3" transform="rotate(300 36 36)"/>
+              <!-- Center circle -->
+              <circle cx="36" cy="36" r="4" fill="none" stroke="#C5A55A" stroke-width="0.8" opacity="0.6"/>
+              <circle cx="36" cy="36" r="1.5" fill="#C5A55A" opacity="0.5"/>
+            </svg>
+          </div>
+          <div class="brand-la">La</div>
+          <div class="brand-tantra">TANTRA</div>
+          <div class="ornament-bottom">
+            <span class="ob-line"></span>
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <rect x="6" y="0.5" width="7.78" height="7.78" rx="1" transform="rotate(45 6 0.5)" stroke="#C5A55A" stroke-width="0.8"/>
+            </svg>
+            <span class="ob-line"></span>
+          </div>
+          <div class="sub-text">Massage &amp; Wellness</div>
+        </div>
+      </div>
+      <div class="card-info">
+        <div class="variant-num">Concept 10</div>
+        <h3>Petal Mark + Gold</h3>
+        <p>Layered petal geometry in gold on dark — organic but structured. Combined with gold-gradient typography for full luxury effect.</p>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
